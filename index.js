@@ -8,6 +8,12 @@ connectMongoDB();
 
 app.use(express.json());
 app.use(cookieParser());
+
+//Define a simple route for the root URL
+app.get("/", (req, res) => {
+  res.send("Server is running...");
+});
+
 app.use("/api/users", require("./routes/users-route"));
 app.use("/api/events",require("./routes/events-route"));
 app.use("/api/payments", require("./routes/payments-route"));
