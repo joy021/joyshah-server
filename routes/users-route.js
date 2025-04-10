@@ -74,7 +74,7 @@ router.post("/login", async (req, res) => {
 
     // Check if user is active
     if (!user.isActive ) {      
-      return res.status(403).json({ message: "Your account is deactivated. Please contact support." });
+      return res.status(403).json({ message: "Your account is deactivated. 📞 Contact support: +91 9173933076" });
     }
 
     // Check if password is correct
